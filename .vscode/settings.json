@@ -1,0 +1,30 @@
+{
+  "[ruby]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.rulers": [120],
+  "files.associations": {
+    "./bin/*": "ruby",
+    ".prettierrc": "json",
+    "Gemfile": "ruby",
+    "Guardfile": "ruby",
+    "Rakefile": "ruby"
+  },
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true
+    },
+    "reek": {
+      "useBundler": true
+    }
+  },
+  "ruby.useBundler": true,
+  "ruby.useLanguageServer": true
+}

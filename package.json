@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "nomics_ruby",
+  "version": "0.1.0",
+  "description": "",
+  "author": "Jonic Linley (https://www.100yen.co.uk)",
+  "homepage": "https://github.com/jonic/nomics_ruby",
+  "repository": "github:jonic/nomics_ruby",
+  "bugs": "https://github.com/jonic/nomics_ruby/issues",
+  "devDependencies": {
+    "@prettier/plugin-ruby": "2.0.0-rc3",
+    "prettier": "2.4.1"
+  }
+}

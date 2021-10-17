@@ -1,0 +1,17 @@
+inherit_from:
+  - ../.rubocop.yml
+require:
+  - rubocop-rspec
+
+Metrics/BlockLength:
+  Enabled: false
+
+RSpec/FilePath:
+  Exclude:
+    - spec/support
+RSpec/ImplicitSubject:
+  EnforcedStyle: single_statement_only
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+RSpec/NestedGroups:
+  Enabled: false

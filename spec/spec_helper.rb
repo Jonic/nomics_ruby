@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'dead_end'
+require 'fuubar'
 require 'nomics_ruby'
 require 'simplecov' unless ENV['NO_COVERAGE']
 require 'vcr'
@@ -10,7 +12,6 @@ SimpleCov.start { add_group('Libraries', 'lib') }
 RSpec.configure do |config|
   config.disable_monkey_patching!
   config.filter_run_when_matching(:focus)
-  config.infer_spec_type_from_file_location!
 
   config.default_formatter = 'doc' if config.files_to_run.one?
   config.example_status_persistence_file_path = 'tmp/rspec_examples.txt'
@@ -19,7 +20,6 @@ RSpec.configure do |config|
   config.order = :random
   config.profile_examples = 10
   config.shared_context_metadata_behavior = :apply_to_host_groups
-  config.use_transactional_fixtures = true
 
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true

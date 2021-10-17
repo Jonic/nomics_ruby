@@ -1,4 +1,3 @@
 --color
 --format Fuubar
---require dead_end
 --require spec_helper

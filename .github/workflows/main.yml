@@ -12,4 +12,4 @@ jobs:
           ruby-version: 2.7.4
           bundler-cache: true
       - name: Run the default task
-        run: bundle exec rake
+        run: bin/bundle exec rake

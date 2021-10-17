@@ -21,7 +21,7 @@ module NomicsRuby
     end
 
     def call
-      NomicsRuby::Currencies.new(ids: from, convert: to, fields: 'id,price').call
+      NomicsRuby::Currencies.new(ids: from, convert: to, fields: 'id,price').call[0]
     end
   end
 end

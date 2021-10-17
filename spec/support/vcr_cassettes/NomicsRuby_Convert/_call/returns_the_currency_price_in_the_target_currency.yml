@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.nomics.com/v1/currencies/ticker?convert=ETH&fields=id,price&ids=BTC&key=e1771c50d6fcd1c3a1b8e6f5e37299a849424a22
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.nomics.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=10, stale-while-revalidate=20, stale-if-error=20
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      X-Pagination-Total-Items:
+      - '1'
+      Date:
+      - Sun, 17 Oct 2021 21:21:36 GMT
+      Content-Length:
+      - '686'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":"BTC","currency":"BTC","symbol":"BTC","name":"Bitcoin","logo_url":"https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/btc.svg","status":"active","price":"16.12047506","price_date":"2021-10-17T00:00:00Z","price_timestamp":"2021-10-17T21:21:00Z","circulating_supply":"18846575","max_supply":"21000000","market_cap":"303815742","market_cap_dominance":"0.4249","num_exchanges":"393","num_pairs":"66507","num_pairs_unmapped":"5168","first_candle":"2011-08-18T00:00:00Z","first_trade":"2011-08-18T00:00:00Z","first_order_book":"2017-01-06T00:00:00Z","rank":"1","rank_delta":"0","high":"618.18051872","high_timestamp":"2015-10-20T00:00:00Z","1d":{"volume":"9737482.23","price_change":"0.17699859","price_change_pct":"0.0111","volume_change":"-2901463.26","volume_change_pct":"-0.2296","market_cap_change":"3351266.52","market_cap_change_pct":"0.0112"},"7d":{"volume":"98807397.10","price_change":"0.081679931","price_change_pct":"0.0051","volume_change":"-4183114.20","volume_change_pct":"-0.0406","market_cap_change":"1642740.94","market_cap_change_pct":"0.0054"},"30d":{"volume":"459014458.04","price_change":"2.19131260","price_change_pct":"0.1573","volume_change":"13301061.46","volume_change_pct":"0.0298","market_cap_change":"41687973.75","market_cap_change_pct":"0.1590"},"365d":{"volume":"13373971779.39","price_change":"-14.30090662","price_change_pct":"-0.4701","volume_change":"-40762754129.56","volume_change_pct":"-0.7530","market_cap_change":"-259590315.13","market_cap_change_pct":"-0.4608"},"ytd":{"volume":"8826324586.19","price_change":"-17.65032288","price_change_pct":"-0.5227","volume_change":"-22053524646.78","volume_change_pct":"-0.7142","market_cap_change":"-323880154.15","market_cap_change_pct":"-0.5160"}}]
+
+'
+  recorded_at: Sun, 17 Oct 2021 21:21:36 GMT
+recorded_with: VCR 6.0.0

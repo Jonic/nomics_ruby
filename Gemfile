@@ -6,7 +6,6 @@ source 'https://rubygems.org'
 gemspec
 
 gem('byebug')
-gem('climate_control')
 gem('dead_end')
 gem('fuubar')
 gem('guard', require: false)

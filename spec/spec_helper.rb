@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'byebug'
 require 'dead_end'
 require 'fuubar'
 require 'nomics_ruby'
@@ -7,7 +8,8 @@ require 'simplecov' unless ENV['NO_COVERAGE']
 require 'vcr'
 require 'webmock/rspec'
 
-SimpleCov.start { add_group('Libraries', 'lib') }
+Dir['lib/**/*.rb'].sort.each { |file| require_relative "../#{file}" }
+Dir['spec/support/**/*.rb'].sort.each { |file| require_relative file }
 
 RSpec.configure do |config|
   config.disable_monkey_patching!
@@ -32,6 +34,8 @@ RSpec.configure do |config|
 
   Kernel.srand(config.seed)
 end
+
+SimpleCov.start
 
 VCR.configure do |config|
   config.configure_rspec_metadata!

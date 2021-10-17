@@ -7,6 +7,7 @@ Gem::Specification.new do |spec|
   spec.version = NomicsRuby::VERSION
   spec.authors = ['Jonic Linley']
   spec.email = ['jonic@100yen.co.uk']
+  spec.executables << 'nomics'
 
   spec.summary = 'A simple wrapper for the Nomics Cryptocurrency API'
   spec.description = 'Retrieve data from api.nomics.com'

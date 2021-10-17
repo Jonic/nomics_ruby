@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+key_present = ENV.key?('NOMICS_API_KEY')
+puts "NOMICS_API_KEY set? #{key_present}"
+puts ENV['NOMICS_API_KEY'] if key_present

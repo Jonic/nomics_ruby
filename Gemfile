@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in nomics_ruby.gemspec
 gemspec
 
+gem('byebug')
 gem('climate_control')
 gem('dead_end')
 gem('fuubar')

@@ -13,18 +13,19 @@ module NomicsRuby
       true
     end
 
-    desc('ticker', '')
+    desc('ticker', 'Get ticker information for one or more currencies')
     long_desc <<-LONGDESC
       Get ticker information for one or more currencies
 
       > $ bin/nomics ticker --ids=BTC,XRP,ETH
     LONGDESC
     method_option(:ids, desc: 'String: comma-separated currency IDs', required: true, type: :string)
+    method_option(:key, desc: 'String: a Nomics API key (optional)', type: :string)
     def ticker
       puts NomicsRuby::Ticker.new(options).call
     end
 
-    desc('currencies', '')
+    desc('currencies', 'Get metadata for one or more currencies, optionally filtered by keys')
     long_desc <<-LONGDESC
       Get metadata for one or more currencies
 
@@ -62,11 +63,12 @@ module NomicsRuby
     LONGDESC
     method_option(:ids, desc: 'String: comma-separated currency IDs', required: true, type: :string)
     method_option(:fields, desc: 'String: comma-separated field keys', type: :string)
+    method_option(:key, desc: 'String: a Nomics API key (optional)', type: :string)
     def currencies
       puts NomicsRuby::Currencies.new(options).call
     end
 
-    desc('convert', '')
+    desc('convert', 'Convert cryptocurrency to fiat or other cryptocurrency')
     long_desc <<-LONGDESC
       Convert cryptocurrency to fiat or other cryptocurrency
 
@@ -78,6 +80,7 @@ module NomicsRuby
     LONGDESC
     method_option(:from, desc: 'String: the base currency ID', required: true, type: :string)
     method_option(:to, desc: 'String: the conversion target currency ID', required: true, type: :string)
+    method_option(:key, desc: 'String: a Nomics API key (optional)', type: :string)
     def convert
       puts NomicsRuby::Convert.new(options).call
     end

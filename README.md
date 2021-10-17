@@ -1,8 +1,6 @@
-# NomicsRuby
+# Nomics Ruby
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/nomics_ruby`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This Gem is an example of a Ruby wrapper for the nomics.com cryptocurrency API.
 
 ## Installation
 
@@ -22,7 +20,35 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+This tool can be used as a CLI, or installed in a Ruby/Rails application and called from the application.
+
+In order to use this tool, your must use a [Nomics API key](https://p.nomics.com/cryptocurrency-bitcoin-api/). This can be configured with an Environment Variable in your application's `.env` file, or in your system's bash or zsh config.
+
+You can also directly specify the API key when using the CLI or classes.
+
+### Using as a CLI
+
+    $ nomics --help
+
+Available commands:
+
+- `convert`
+- `currencies`
+- `ticker`
+
+View usage information for each command:
+
+    $ nomics help [COMMAND]
+
+The output or each command is echoed to the Terminal.
+
+### Using in an application
+
+The same functionality available in the CLI is also available by directly calling the following classes
+
+- `NomicsRuby::Convert.new([options]).get`
+- `NomicsRuby::Currencies.new([options]).get`
+- `NomicsRuby::Ticker.new([options]).get`
 
 ## Development
 

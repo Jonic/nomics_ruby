@@ -7,7 +7,7 @@ require_relative './currencies'
 require_relative './ticker'
 
 module NomicsRuby
-  # Command Line Interface definition for bin/nomics executable
+  # Command Line Interface definition for exe/nomics executable
   class CLI < Thor
     def self.exit_on_failure?
       true
@@ -17,7 +17,7 @@ module NomicsRuby
     long_desc <<-LONGDESC
       Get ticker information for one or more currencies
 
-      > $ bin/nomics ticker --ids=BTC,XRP,ETH
+      > $ exe/nomics ticker --ids=BTC,XRP,ETH
     LONGDESC
     method_option(:ids, desc: 'String: comma-separated currency IDs', required: true, type: :string)
     method_option(:key, desc: 'String: a Nomics API key (optional)', type: :string)
@@ -29,7 +29,7 @@ module NomicsRuby
     long_desc <<-LONGDESC
       Get metadata for one or more currencies
 
-      > $ bin/nomics currencies --ids=BTC,ETH --fields=circulating_supply,max_supply,name,symbol,price
+      > $ exe/nomics currencies --ids=BTC,ETH --fields=circulating_supply,max_supply,name,symbol,price
 
       Valid field keys: [
         circulating_supply,
@@ -72,9 +72,9 @@ module NomicsRuby
     long_desc <<-LONGDESC
       Convert cryptocurrency to fiat or other cryptocurrency
 
-      > $ bin/nomics convert --from=BTC --to=ETH\n
-      > $ bin/nomics convert --from=BTC --to=EUR\n
-      > $ bin/nomics convert --from=ETH --to=GBP
+      > $ exe/nomics convert --from=BTC --to=ETH\n
+      > $ exe/nomics convert --from=BTC --to=EUR\n
+      > $ exe/nomics convert --from=ETH --to=GBP
 
       The conversion target currency may be any valid Fiat or Cryptocurrency ID
     LONGDESC
